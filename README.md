@@ -73,7 +73,7 @@ You can reference source code in window-basic-main.cpp file(OBSBasic::InitAgoraS
 
 * Create a folder named win-agora in plugins folder of obs studio, the create agora-plugin.cpp file. obs.dll will automatically load all dll in the plugins folder.
 
-* Include header file obs-module.h, write OBS\_DECLARE\_MODULE to declare win-agora plugin. Register agora\_pcm、agora\_yuv、agora\_service、agora\_output in obs\_load\_module function. When obs.dll load win-agora.dll plugin, it'll register these plugins.
+* Include header file obs-module.h, write OBS\_DECLARE\_MODULE to declare win-agora plugin. Register agora\_pcm, agora\_yuv, agora\_service, agora\_output in obs\_load\_module function. When obs.dll load win-agora.dll plugin, it'll register these plugins.
 
 * The most important thing for encoder is obs\_encoder\_info.encode(AgoraPCM\_Encode and AgoraYUV\_Encode). OBS will call agora sdk api in these two function and send audio and video data to agora sdk.
 Audio and Video encoders are implemented in agora-pcm-encoder.cpp and agora-yuv-encoder.cpp.
